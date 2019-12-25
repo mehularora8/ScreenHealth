@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Tab</title>
+	<!--Meta content-->
+	<meta charset="utf-8"></meta>
+	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<meta name = "description" content = "A chrome extension to help you take care of your health when you're working on your screen for long durations.">
+	<link rel = "stylesheet" type = "text/css" href = "index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--Load Favicon-->
+	<link rel="icon" href="SH logo.png" type="image/png" sizes="16x16">
+	<!--Load JS files-->
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src = "greeter.js"></script>
+	<script type="text/javascript" src = "weather.js"></script>
+</head>
+<body id = "body">
+		<div id = "loadingmask">
+			<div id = "loading"></div>
+		</div>
+		<div class = "container">
+			<div id = "date"></div>
+			<div id = "clock"></div>
+			<div id = "temp"></div>
+			<img id = "pic">
+			<div id = "appendcontainer">
+				<div id = "append"></div>
+			</div>
+			<div id = "salutationcontainer">
+				<div id = "salutation"></div>
+			</div>
+		</div>
+
+		<a href="https://github.com/mehularora8/ScreenHealth"><div id = "github"></div></a>
+</body>
+</html>

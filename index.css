@@ -1,0 +1,171 @@
+
+@font-face{
+	font-family: "myriad";
+	src: url(fonts/myriad.OTF);
+}
+
+html{
+	background: #fff;
+}
+body{
+	margin:0;
+	padding: 0;
+	font-family: "myriad", sans-serif;
+	overflow: hidden;
+}
+
+@keyframes color{
+	100% {
+		background: white;
+		color: black;
+	}
+} 
+
+/*@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}*/
+
+#loadingmask{
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #171717;
+	z-index: 99;
+}
+
+#loading{
+	/*To center div*/
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	
+	border: 1vh solid #f3f3f3; /* Light grey */
+	border-top: 1vh solid #a32e26; /* Dark grey */
+	border-radius: 50%;
+	width: 5vh;
+	height: 5vh;
+	animation: spin 2s linear infinite;
+}
+
+.container{
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+}
+
+#appendcontainer{
+	text-align: center;
+	position: relative;
+	top: 30vh;
+} 
+
+#salutationcontainer{
+	text-align: center;
+	position: absolute;
+	bottom: 1vh;
+	width: 100vw;
+}
+
+#append{
+	font-weight: bolder;
+	display: inline-block;
+	height: 15vh;
+	width: auto;
+	font-size: 8vh;
+	line-height: 15vh;
+	color: white;
+}
+
+#salutation{
+	font-weight: lighter;
+	display: inline-block;
+	height: 10vh;
+	width: auto;
+	color: white;
+	font-size: 3vh;
+	line-height: 10vh;
+}
+
+#github{
+	height: 8vh;
+	width: 8vh;
+	position: absolute;
+	right: 1vh;
+	bottom: 1vh;
+	background: url("images/github.svg");
+	background-size: contain;
+}
+
+#clock{
+	font-weight: bolder;
+	position: relative;
+	top: 30vh;
+	height:20vh;
+	width: auto;
+	color: white;
+	font-size: 20vh;
+	line-height: 20vh;
+}
+
+#date{
+	position: absolute;
+	right: 1vh;
+	top: 1vh;
+	width: auto;
+	font-size: 2vh;
+	height: 3vh;
+	line-height: 3vh;
+	color: white;
+}
+
+#pic{
+	position: absolute;
+	left: 1vh;
+	top:1vh;
+	width: 5vh;
+	height: 5vh;
+}
+
+#temp{
+	position: absolute;
+	left: 7vh;
+	top: 1vh;
+	height: 5vh;
+	width: auto;
+	color: white;
+	line-height: 5vh;
+	font-size: 25px;
+}
+
+/*
+
+#buttoncontainer{
+	position: relative;
+	top: 30vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+}
+
+.button{
+	width: 10vw;
+	height: 6vh;
+	border-radius: 1vh;
+	border: 1px solid white;
+	margin-right: 1vw;
+	margin-left: 1vw;
+	color: white;
+	line-height: 6vh;
+	font-size: 2vh;
+}
+
+.button:hover{
+	animation: color 0.5s forwards;
+	cursor: pointer;
+}*/
