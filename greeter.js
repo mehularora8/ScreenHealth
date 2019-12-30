@@ -1,24 +1,3 @@
-		$(document).ready(function(){
-			var request = $.ajax({
-			    url: "https://api.unsplash.com/photos/random",
-			    method: "GET",
-			    data: { client_id: 'b3edcbff864ef66e5236d0866f535ffa587aaa7ac12a9b99bd979dead01bde4c', query: 'city%20night', orientation: 'landscape'},
-			    success: function (response) {
-			        var dataArray = response;
-			        console.log(dataArray);
-			        var image = dataArray.urls.full;
-			        console.log(image);
-			        document.getElementById("body").style.background = 'url(' + image + ')';
-			        document.getElementById("body").style.backgroundSize = "cover";
-			    }
-			});
-			startup();
-		});
-
-		window.onload = () => {
-			document.getElementById('loadingmask').style.display = 'none';
-		}
-
 		var salutations = ["Hope you have a great day!",
 		"Did you drink enough water today?", 
 		"Have you given your eyes some rest in a while?", 
@@ -46,13 +25,6 @@
 				}
 			 });			
 		} */
-
-
-		/*function setBackground(){
-			var i = Math.floor(Math.random() * 11); 
-			document.getElementById("body").style.backgroundImage = "url(images/" + i + ".jpg)";
-			document.getElementById("body").style.backgroundSize = "cover";
-		}*/
 
 		function clock(){
 			var date = new Date();
@@ -120,11 +92,8 @@
 		}
 
 		function startup(){
-			console.log('sicc');
 
 			setInterval(clock, 1000);
-
-			
 			greet();
 			setInterval(greet, 5000);
 			salutation();
@@ -142,4 +111,39 @@
 				newuser();
 			}*/
 		}
+
+		$(document).ready(function(){
+			var request = $.ajax({
+			    url: "https://api.unsplash.com/photos/random",
+			    method: "GET",
+			    data: { client_id: 'b3edcbff864ef66e5236d0866f535ffa587aaa7ac12a9b99bd979dead01bde4c', query: 'city%20night%20dark', orientation: 'landscape'},
+			    success: function (response) {
+			        var dataArray = response;
+			        console.log(dataArray);
+			        var image = dataArray.urls.full;
+			        console.log(image);
+			        document.getElementById("body").style.background = 'linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(' + image + ')';
+			        document.getElementById("body").style.backgroundSize = "cover";
+			    }
+			});
+
+			var request = $.ajax({
+            url: "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather",
+            method: "GET",
+            data: { id: '3669881', appid: '90220591bfabe9b624628773d51625a4', units: 'metric' },
+            success: function (response) {
+                var dataArray = response;
+                console.log(dataArray);
+                document.getElementById('temp').innerHTML = dataArray.main.temp - (dataArray.main.temp % 1) + '&deg;C';
+                var icon = dataArray.weather[0].icon;
+                var weather_image = document.getElementById('pic');
+                weather_image.src = "images/" + dataArray.weather[0].icon + ".png";
+            }
+        });
+			startup();	
+	});
+
+		$(document).ajaxComplete(function () {
+		    document.getElementById('loadingmask').style.display = 'none';
+		});
 

@@ -152,16 +152,20 @@ form{
 form img{
 	height: 3vh;
 	width: 3vh;
-	border-bottom: 3px solid #262424; 
+	vertical-align: middle;
 }
 
 input{
+	padding: 0;
+	font-family: "myriad", sans-serif;
 	height: 2vh;
-	width: 17vw;
+	width: 15vw;
+	font-size: 2vh;
 	border: none;
 	background: transparent;
-	border-bottom: 3px solid #262424;
-	color: grey;
+	border-bottom: 2px solid white;
+	color: white;
+	vertical-align: middle;
 }
 
 /*
