@@ -12,6 +12,7 @@ body{
 	padding: 0;
 	font-family: "myriad", sans-serif;
 	overflow: hidden;
+	background: black;
 }
 
 @keyframes color{
@@ -44,7 +45,7 @@ body{
   	transform: translate(-50%, -50%);
   	
 	border: 1vh solid #f3f3f3; /* Light grey */
-	border-top: 1vh solid #a32e26; /* Dark grey */
+	border-top: 1vh solid #4a4949; /* Dark grey */
 	border-radius: 50%;
 	width: 5vh;
 	height: 5vh;
@@ -139,6 +140,28 @@ body{
 	color: white;
 	line-height: 5vh;
 	font-size: 25px;
+}
+
+form{
+	position: relative;
+	top: 35vh;
+	height: 4vh;
+
+}
+
+form img{
+	height: 3vh;
+	width: 3vh;
+	border-bottom: 3px solid #262424; 
+}
+
+input{
+	height: 2vh;
+	width: 17vw;
+	border: none;
+	background: transparent;
+	border-bottom: 3px solid #262424;
+	color: grey;
 }
 
 /*

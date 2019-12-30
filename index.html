@@ -12,6 +12,7 @@
 	<link rel="icon" href="SH logo.png" type="image/png" sizes="16x16">
 	<!--Load JS files-->
 	<script src="jquery.js"></script>
+	<!--<script type="text/javascript" src = "bgimage.js"></script>-->
 	<script type="text/javascript" src = "greeter.js"></script>
 	<script type="text/javascript" src = "weather.js"></script>
 </head>
@@ -27,6 +28,10 @@
 			<div id = "appendcontainer">
 				<div id = "append"></div>
 			</div>
+			<form method="get" action="https://www.google.com/search">
+				<img src = "images/google.png">
+				<input type="searchquery" name="q" autocomplete="off" value="">
+			</form>
 			<div id = "salutationcontainer">
 				<div id = "salutation"></div>
 			</div>

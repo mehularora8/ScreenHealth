@@ -33,9 +33,10 @@ $(document).ready(function () {
             success: function (response) {
                 var dataArray = response;
                 console.log(dataArray);
-                console.log(dataArray.weather[0].icon);
                 document.getElementById('temp').innerHTML = dataArray.main.temp - (dataArray.main.temp % 1) + '&deg;C';
-                document.getElementById('pic').src = "http://openweathermap.org/img/w/" + dataArray.weather[0].icon + ".png";
+                var icon = dataArray.weather[0].icon;
+                var weather_image = document.getElementById('pic');
+                weather_image.src = "images/" + dataArray.weather[0].icon + ".png";
             }
         });
     });

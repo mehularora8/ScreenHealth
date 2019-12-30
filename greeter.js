@@ -1,4 +1,17 @@
 		$(document).ready(function(){
+			var request = $.ajax({
+			    url: "https://api.unsplash.com/photos/random",
+			    method: "GET",
+			    data: { client_id: 'b3edcbff864ef66e5236d0866f535ffa587aaa7ac12a9b99bd979dead01bde4c', query: 'city%20night', orientation: 'landscape'},
+			    success: function (response) {
+			        var dataArray = response;
+			        console.log(dataArray);
+			        var image = dataArray.urls.full;
+			        console.log(image);
+			        document.getElementById("body").style.background = 'url(' + image + ')';
+			        document.getElementById("body").style.backgroundSize = "cover";
+			    }
+			});
 			startup();
 		});
 
@@ -12,7 +25,7 @@
 		"Today might be a good day to get some chores done!", 
 		"Interested in knowing how this website was coded? Click the GitHub icon in the bottom right."];
 
-		var greetings = ["Hello", "Aloha", "Bonjour", "Hola", "Zdravstvuyte", "Konnichiwa"];
+		var greetings = ["Hello", "Aloha", "Bonjour", "Hola", "Zdravstvuyte", "Guten Tag", "Yassas", "Salve"];
 
 		//Get and Set cookies to be worked on
 		/*function setCookie(cookie_value){
@@ -35,11 +48,11 @@
 		} */
 
 
-		function setBackground(){
+		/*function setBackground(){
 			var i = Math.floor(Math.random() * 11); 
 			document.getElementById("body").style.backgroundImage = "url(images/" + i + ".jpg)";
 			document.getElementById("body").style.backgroundSize = "cover";
-		}
+		}*/
 
 		function clock(){
 			var date = new Date();
@@ -107,7 +120,6 @@
 		}
 
 		function startup(){
-			setBackground();
 			console.log('sicc');
 
 			setInterval(clock, 1000);

@@ -4,7 +4,7 @@ chrome.browserAction.onClicked.addListener(function()
 });
 
 setInterval(function(){
-	alert("Rest your eyes! It has been 20 minutes since you started looking at your screen. In order to keep your eyes healthy, please follow the 20/20/20 rule.");
+	alert("Rest your eyes! It has been 20 minutes since you started looking at your screen. In order to keep your eyes healthy, please follow the 20/20/20 rule - focus at a point 20 feet away for 20 seconds");
 }, 20 * 60 * 1000);
 
 setInterval(function(){
