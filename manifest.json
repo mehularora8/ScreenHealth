@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Screen Health",
-  "version": "1.0",
+  "version": "1.1.2",
   "description": "An extension to remind you to take care of your health while working for long durations on screen",
 
   "permissions":["storage"],

@@ -40,6 +40,7 @@
 			} else if (minutes > 10 && hours < 10) {
 				document.getElementById("clock").innerHTML =  "0" + hours + ':' + minutes;
 			}
+			console.log('lol');
 
 			var datediv = document.getElementById('date');
 
@@ -93,7 +94,8 @@
 
 		function startup(){
 
-			setInterval(clock, 1000);
+			clock();
+			setInterval(clock, 60 * 1000);
 			greet();
 			setInterval(greet, 5000);
 			salutation();
